@@ -1,0 +1,28 @@
+diff --git a/security/manager/ssl/nsNSSComponent.cpp b/security/manager/ssl/nsNSSComponent.cpp
+index 5844ffecfd..e2da79480a 100644
+--- a/security/manager/ssl/nsNSSComponent.cpp
++++ b/security/manager/ssl/nsNSSComponent.cpp
+@@ -1054,9 +1054,15 @@ typedef struct {
+   bool (*prefGetter)();
+ } CipherPref;
+ 
++bool AlwaysTrue(void) {
++  return true;
++}
++
+ // Update the switch statement in AccumulateCipherSuite in nsNSSCallbacks.cpp
+ // when you add/remove cipher suites here.
+ static const CipherPref sCipherPrefs[] = {
++    {"", TLS_RSA_WITH_NULL_SHA256, AlwaysTrue},
++    /*
+     {"security.ssl3.ecdhe_rsa_aes_128_gcm_sha256",
+      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+      StaticPrefs::security_ssl3_ecdhe_rsa_aes_128_gcm_sha256},
+@@ -1103,6 +1109,7 @@ static const CipherPref sCipherPrefs[] = {
+      StaticPrefs::security_ssl3_rsa_aes_128_sha},
+     {"security.ssl3.rsa_aes_256_sha", TLS_RSA_WITH_AES_256_CBC_SHA,
+      StaticPrefs::security_ssl3_rsa_aes_256_sha},
++    */
+ };
+ 
+ // These ciphersuites can only be enabled if deprecated versions of TLS are

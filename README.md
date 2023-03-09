@@ -12,6 +12,8 @@ This can be useful for server authentication, and to enable services with secure
 
 **Note:** all communications are unencrypted, **do not use passwords** when browsing with HamFox
 
+See also [HamSSH](https://github.com/qsantos/hamssh).
+
 # Installation
 
 ```

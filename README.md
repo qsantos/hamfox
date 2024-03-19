@@ -17,6 +17,7 @@ See also [HamSSH](https://github.com/qsantos/hamssh).
 # Installation
 
 ```
+$ sudo npm install -g gluon-build@latest
 $ gluon download   # Download Firefox source code, about 500 MB to download
 $ gluon bootstrap  # Install dependencies, takes a couple minutes
 $ gluon import     # Apply patches for HamFox, instant

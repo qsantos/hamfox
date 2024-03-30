@@ -17,18 +17,18 @@ See also [HamSSH](https://github.com/qsantos/hamssh).
 # Installation
 
 ```
-$ sudo npm install -g gluon-build@latest
-$ gluon download   # Download Firefox source code, 500 MB to download and unpack, takes a couple minutes
-$ gluon bootstrap  # Install dependencies, takes a couple minutes
-$ gluon import     # Apply patches for HamFox, instant
-$ gluon build      # Compile HamFox, takes a couple hours
-$ gluon run        # Start Hamfox, takes a couple seconds
+$ sudo apt install curl python3 mercurial
+$ curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py -O
+$ python3 bootstrap.py --no-interactive --no-system-changes
+$ cd mozilla-unified
+$ ./mach build
+$ ./mach run
 ```
 
 **Note:**
 Compiling `gkrust` requires 11 GB of free memory, and takes about 10 minutes.
 If there is not enough memory, the build will fail with the message below.
-If that happens, free up some memory by killing some applications (e.g. Firefox), and run `gluon build` again to resume the build.
+If that happens, free up some memory by killing some applications (e.g. Firefox), and run `./mach build` again to resume the build.
 If you cannot make this amount of memory available, enable swap, but note that this will make the final part of the build very long.
 
 ```

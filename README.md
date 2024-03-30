@@ -17,8 +17,7 @@ See also [HamSSH](https://github.com/qsantos/hamssh).
 # Installation
 
 ```
-$ sudo apt install curl python3 mercurial
-$ curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py -O
+$ sudo apt install python3 mercurial
 $ python3 bootstrap.py --no-interactive --no-system-changes
 $ cd mozilla-unified
 $ ./mach build

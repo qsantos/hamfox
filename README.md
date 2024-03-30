@@ -20,6 +20,7 @@ See also [HamSSH](https://github.com/qsantos/hamssh).
 $ sudo apt install python3 mercurial
 $ python3 bootstrap.py --no-interactive --no-system-changes
 $ cd mozilla-unified
+$ patch -p1 <../null-only.patch
 $ ./mach build
 $ ./mach run
 ```

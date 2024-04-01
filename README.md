@@ -14,7 +14,7 @@ This can be useful for server authentication, and to enable services with secure
 
 See also [HamSSH](https://github.com/qsantos/hamssh).
 
-# Installation
+# Building
 
 ```
 sudo apt install python3 mercurial

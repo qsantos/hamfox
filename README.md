@@ -17,12 +17,12 @@ See also [HamSSH](https://github.com/qsantos/hamssh).
 # Installation
 
 ```
-$ sudo apt install python3 mercurial
-$ python3 bootstrap.py --no-interactive --no-system-changes --application-choice=browser
-$ cd mozilla-unified
-$ patch -p1 <../null-only.patch
-$ ./mach build
-$ ./mach run
+sudo apt install python3 mercurial
+python3 bootstrap.py --no-interactive --no-system-changes --application-choice=browser
+cd mozilla-unified
+patch -p1 <../null-only.patch
+./mach build
+./mach run
 ```
 
 **Note:**
